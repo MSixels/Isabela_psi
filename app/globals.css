@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- As 5 cores da marca. Literais do kit, nunca aproximadas. --- */
+  --color-barro: #8e4b2e; /* acento único */
+  --color-umbre: #3a2b23; /* texto e seções escuras */
+  --color-areia: #d8c4ac; /* divisores e superfícies */
+  --color-aveia: #efe6d9; /* fundo padrão */
+  --color-ocre: #b98a2e; /* destaque raro — nunca texto pequeno */
+
+  /* --- Papéis derivados. Não são cores novas: são mistura dos neutros da
+     marca, medidas contra o design e nomeadas uma única vez aqui. --- */
+  --color-texto: var(--color-umbre);
+  --color-texto-corpo: color-mix(in oklab, var(--color-umbre) 93%, var(--color-aveia)); /* #4a382e */
+  --color-texto-suave: color-mix(in oklab, var(--color-umbre) 75%, var(--color-aveia)); /* #6b584c */
+  --color-texto-nota: color-mix(in oklab, var(--color-umbre) 49%, var(--color-aveia)); /* #a08a79 */
+  --color-sobre-suave: color-mix(in oklab, var(--color-umbre) 25%, var(--color-aveia)); /* #c9b6a3 — texto sobre umbre */
+  --color-superficie: color-mix(in oklab, var(--color-areia) 64%, var(--color-aveia)); /* #e2d2ba */
+  --color-linha: color-mix(in oklab, var(--color-umbre) 16%, transparent);
+  --color-barro-hover: color-mix(in oklab, var(--color-barro) 74%, var(--color-umbre)); /* #7a3f26 */
+  --color-barro-claro: color-mix(in oklab, var(--color-barro) 91%, var(--color-aveia)); /* #a1583a */
+
+  /* --- Tipografia. As famílias vêm de next/font (layout.tsx). --- */
+  --font-display: var(--font-petrona), Georgia, serif;
+  --font-ui: var(--font-karla), system-ui, sans-serif;
+
+  --text-hero: clamp(38px, 6vw, 64px);
+  --text-h2: 34px;
+  --text-h3: 24px;
+  --text-corpo: 17px;
+
+  --radius-marca: 3px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-aveia);
+    color: var(--color-texto);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}

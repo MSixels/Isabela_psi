@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-barro: #8E4B2E;
+  --color-umbre: #3A2B23;
+  --color-areia: #D8C4AC;
+  --color-aveia: #EFE6D9;
+  --color-ocre:  #B98A2E;
+
+  --font-display: "Petrona", Georgia, serif;
+  --font-ui: "Karla", system-ui, sans-serif;
+
+  --text-hero: clamp(38px, 6vw, 64px);
+  --text-h2: 34px;
+  --text-h3: 24px;
+  --text-corpo: 17px;
+
+  --radius-marca: 3px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Isabela Sixel",
+  "short_name": "isabela sixel",
+  "icons": [
+    {
+      "src": "/icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#3A2B23",
+  "background_color": "#EFE6D9",
+  "display": "standalone"
+}

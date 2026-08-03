@@ -1,0 +1,27 @@
+:root{
+  /* cor */
+  --cor-barro:#8E4B2E;   /* acento único */
+  --cor-umbre:#3A2B23;   /* texto e fundo escuro */
+  --cor-areia:#D8C4AC;   /* divisores e superfícies */
+  --cor-aveia:#EFE6D9;   /* fundo da página */
+  --cor-ocre:#B98A2E;     /* destaque raro */
+
+  /* papéis */
+  --fundo:var(--cor-aveia);
+  --texto:var(--cor-umbre);
+  --texto-suave:color-mix(in oklab, var(--cor-umbre) 62%, var(--cor-aveia));
+  --linha:color-mix(in oklab, var(--cor-umbre) 16%, transparent);
+  --acento:var(--cor-barro);
+
+  /* tipografia */
+  --fonte-display:'Petrona', Georgia, serif;
+  --fonte-ui:'Karla', system-ui, sans-serif;
+  --t-hero:clamp(38px, 6vw, 64px);
+  --t-h2:34px; --t-h3:24px; --t-corpo:17px; --t-apoio:14px; --t-rotulo:11px;
+
+  /* ritmo */
+  --esp-1:8px; --esp-2:16px; --esp-3:24px; --esp-4:40px;
+  --esp-5:64px; --esp-6:96px; --esp-7:140px;
+  --raio:3px;
+  --largura-texto:66ch;
+}
