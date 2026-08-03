@@ -30,3 +30,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# scripts de verificação visual (scratch, não versionar)
+/check-*.mjs

@@ -47,15 +47,19 @@ Tipografia: **Petrona** (300/400 + itálico) para leitura; **Karla** (400/500) p
 UI, botões, rótulos. Nunca o contrário. Carregar via `next/font`.
 
 Logo por tamanho — a escolha é por **largura renderizada**, não pelo lugar na
-página. A regra: quando não couber o fio, o fio sai inteiro. Nunca engrossar por
-conta própria, nunca remover só parte dele.
+página. Cada corte só atinge densidade cheia (fio **e laço** íntegros) dentro da
+sua faixa; abaixo dela o gesto apaga e parece defeito. Quando não couber o fio,
+o fio sai inteiro. Nunca engrossar por conta própria, nunca remover só parte dele.
 
-| versão | largura | fio |
+| versão | largura | uso |
 |---|---|---|
-| `assinatura-fio` | ≥ 300 px | fio fino |
-| `assinatura-fio-compacta` | 140–300 px — **cabeçalho entra aqui** | fio 60% mais espesso, íntegro |
-| `assinatura` | < 140 px | sem fio (wordmark) |
-| `selo` | ≥ 16 px | monograma |
+| `assinatura-fio` | ≥ 420 px | hero, capa de artigo |
+| `assinatura-fio-compacta` | 260–420 px | rodapé, e-mail |
+| `assinatura-fio-mini` | 150–260 px | **cabeçalho** |
+| `assinatura` (sem fio) | < 150 px | espaços apertados |
+| `selo-fio` | ≥ 60 px | — |
+| `selo-fio-mini` | 30–60 px | — |
+| `selo` (sem fio) | ≥ 16 px | favicon, avatar |
 
 ### Arquivos que NÃO vão para produção
 - `Landing Isabela Sixel.dc.html` — formato do Claude Design. É **espelho de layout,

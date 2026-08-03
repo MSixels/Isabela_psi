@@ -57,6 +57,31 @@
   }
 }
 
+@layer components {
+  /* Algarismo grande decorativo no fundo dos cartões de Sintomas. Gerado por
+     CSS via attr(data-n): não entra na árvore de acessibilidade — correto,
+     porque é ornamento, não conteúdo. */
+  .sintoma-card::before {
+    content: attr(data-n);
+    position: absolute;
+    right: -6px;
+    bottom: -26px;
+    font-family: var(--font-display);
+    font-size: 92px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-barro);
+    opacity: 0.13;
+    pointer-events: none;
+  }
+
+  @media (max-width: 639.98px) {
+    .sintoma-card::before {
+      font-size: 72px;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,

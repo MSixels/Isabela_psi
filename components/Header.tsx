@@ -14,9 +14,9 @@ export default function Header() {
     <header className="flex flex-wrap items-center justify-between gap-4 border-b border-areia px-6 py-[22px] md:px-10">
       <a href="#topo" className="block leading-[0]">
         {/* Regra de marca por largura renderizada: mobile não comporta o fio,
-            então usa a assinatura (wordmark, <140px); a partir de md entra a
-            assinatura-fio-compacta a 225px (faixa 140–300px, fio íntegro e mais
-            espesso), que dá ~40px de altura. */}
+            então usa a assinatura (wordmark, <150px); a partir de md entra a
+            assinatura-fio-mini a 225px — corte óptico da faixa 150–260px, em que
+            o laço do fio rende com densidade cheia. Dá ~40px de altura. */}
         <Image
           src="/marca/assinatura-umbre.svg"
           alt="Isabela Sixel"
@@ -26,7 +26,7 @@ export default function Header() {
           className="h-auto w-[132px] md:hidden"
         />
         <Image
-          src="/marca/assinatura-fio-compacta-umbre.svg"
+          src="/marca/assinatura-fio-mini-umbre.svg"
           alt="Isabela Sixel"
           width={225}
           height={40}

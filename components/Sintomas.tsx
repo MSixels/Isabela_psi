@@ -20,25 +20,22 @@ export default function Sintomas() {
         </p>
       </div>
 
-      {/* Grade com fio de 1px: o fundo areia aparece nos gaps entre os cards.
-          minmax(min(100%,300px),1fr) evita overflow abaixo de 300px de largura. */}
-      <div
-        className="grid gap-px border border-areia bg-areia"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
-        }}
-      >
+      {/* Lista real (semântica): seis frases que a pessoa pode reconhecer. */}
+      <ul className="m-0 grid list-none grid-cols-1 gap-[14px] p-0 min-[640px]:grid-cols-2 min-[900px]:grid-cols-3">
         {CARDS.map((texto, i) => (
-          <div key={i} className="bg-aveia px-[34px] py-9">
-            <div className="mb-[14px] font-ui text-[11px] tracking-[0.18em] text-barro">
-              {String(i + 1).padStart(2, "0")}
-            </div>
-            <p className="font-display text-[22px] leading-[1.4] text-umbre">
+          <li
+            key={i}
+            data-n={i + 1}
+            className="sintoma-card relative overflow-hidden rounded-marca bg-superficie px-6 pt-[26px] pb-[30px]"
+          >
+            {/* Filete decorativo acima da frase. */}
+            <span aria-hidden className="mb-5 block h-0.5 w-[26px] bg-barro" />
+            <p className="relative font-display text-[19px] leading-[1.45] text-texto-corpo">
               {texto}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <p className="mt-10 max-w-[52ch] font-display text-[19px] italic leading-[1.55] text-texto-corpo">
         Se alguma dessas frases parou você por um instante, talvez seja hora de
