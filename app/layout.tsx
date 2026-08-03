@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Petrona, Karla } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -37,7 +38,6 @@ export const metadata: Metadata = {
     siteName: "Isabela Sixel",
     title: titulo,
     description: descricao,
-    // TODO: gerar /og.png a partir do kit de marca (Matheus gera a imagem).
     images: [
       {
         url: "/og.png",
@@ -54,7 +54,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${petrona.variable} ${karla.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -33,6 +33,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-aveia);
     color: var(--color-texto);
@@ -43,5 +47,23 @@
 
   p {
     text-wrap: pretty;
+  }
+
+  /* Foco de teclado visível por padrão (links de texto sobre fundo claro).
+     Os botões de acento sobrescrevem com anel próprio, por contraste. */
+  :focus-visible {
+    outline: 2px solid var(--color-barro);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
