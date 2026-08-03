@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Sintomas from "@/components/Sintomas";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          {/* TODO: Sintomas · Sobre · ComoFunciona · Formação · Conteúdo · FAQ · CtaFinal */}
+          <Sintomas />
+          {/* TODO: Sobre · ComoFunciona · Formação · Conteúdo · FAQ · CtaFinal */}
         </main>
         {/* TODO: Footer */}
       </div>
