@@ -1,3 +1,4 @@
+import FotoPlaceholder from "./FotoPlaceholder";
 import SectionLabel from "./SectionLabel";
 import WhatsappButton from "./WhatsappButton";
 
@@ -27,23 +28,13 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Coluna da foto — placeholder listrado com a proporção da foto final já
-          reservada, para não haver salto de layout na troca.
-          TODO: substituir por
-            <Image src="/fotos/hero.jpg" alt="[descrever a foto]" fill
-                   className="object-cover" sizes="(min-width:768px) 45vw, 100vw" />
-          mantendo este container (retrato vertical) como o positioning parent. */}
-      <div
-        className="relative flex aspect-[3/4] items-end p-[22px] md:aspect-auto md:min-h-[480px]"
-        style={{
-          background:
-            "repeating-linear-gradient(45deg, var(--color-areia), var(--color-areia) 12px, var(--color-superficie) 12px, var(--color-superficie) 24px)",
-        }}
-      >
-        <span className="bg-aveia px-[11px] py-2 font-ui text-[12px] tracking-[0.03em] text-texto-suave">
-          FOTO — rosto dela, olhando para a câmera · retrato vertical
-        </span>
-      </div>
+      {/* Coluna da foto (retrato vertical). TODO: trocar por
+          <Image fill className="object-cover"> quando a foto real chegar — o
+          container já reserva a proporção. */}
+      <FotoPlaceholder
+        label="FOTO — rosto dela, olhando para a câmera · retrato vertical"
+        className="aspect-[3/4] md:aspect-auto md:min-h-[480px]"
+      />
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Sintomas from "@/components/Sintomas";
+import Sobre from "@/components/Sobre";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
         <main>
           <Hero />
           <Sintomas />
-          {/* TODO: Sobre · ComoFunciona · Formação · Conteúdo · FAQ · CtaFinal */}
+          <Sobre />
+          {/* TODO: ComoFunciona · Formação · Conteúdo · FAQ · CtaFinal */}
         </main>
         {/* TODO: Footer */}
       </div>
