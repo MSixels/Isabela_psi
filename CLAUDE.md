@@ -46,15 +46,16 @@ nunca aproximar hex, nunca adicionar uma sexta cor.** Um acento só: barro `#8E4
 Tipografia: **Petrona** (300/400 + itálico) para leitura; **Karla** (400/500) para
 UI, botões, rótulos. Nunca o contrário. Carregar via `next/font`.
 
-Logo por tamanho — a regra é: quando não couber o fio, o fio sai inteiro. Nunca
-engrossar por conta própria, nunca remover só parte dele.
+Logo por tamanho — a escolha é por **largura renderizada**, não pelo lugar na
+página. A regra: quando não couber o fio, o fio sai inteiro. Nunca engrossar por
+conta própria, nunca remover só parte dele.
 
-| onde | arquivo | largura |
+| versão | largura | fio |
 |---|---|---|
-| cabeçalho | `assinatura-fio` | ≥ 300 px |
-| rodapé, e-mail | `assinatura-fio-compacta` | 140–300 px |
-| espaço apertado | `assinatura` | < 140 px |
-| favicon, avatar | `selo` | ≥ 16 px |
+| `assinatura-fio` | ≥ 300 px | fio fino |
+| `assinatura-fio-compacta` | 140–300 px — **cabeçalho entra aqui** | fio 60% mais espesso, íntegro |
+| `assinatura` | < 140 px | sem fio (wordmark) |
+| `selo` | ≥ 16 px | monograma |
 
 ### Arquivos que NÃO vão para produção
 - `Landing Isabela Sixel.dc.html` — formato do Claude Design. É **espelho de layout,

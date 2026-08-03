@@ -24,7 +24,7 @@
   --font-display: var(--font-petrona), Georgia, serif;
   --font-ui: var(--font-karla), system-ui, sans-serif;
 
-  --text-hero: clamp(38px, 6vw, 64px);
+  --text-hero: clamp(38px, 5vw, 58px);
   --text-h2: 34px;
   --text-h3: 24px;
   --text-corpo: 17px;
