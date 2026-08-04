@@ -93,6 +93,22 @@
     letter-spacing: 0.18em;
     color: var(--color-barro);
   }
+
+  /* FAQ nativa (<details>/<summary>). Remove o marcador padrão nos dois motores
+     — só o ::-webkit não basta. O "+" é decorativo e vira "×" ao abrir. */
+  .faq-summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-mais {
+    transition: transform 0.2s ease;
+  }
+  details[open] .faq-mais {
+    transform: rotate(45deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

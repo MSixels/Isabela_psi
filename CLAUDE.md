@@ -101,7 +101,12 @@ Como funciona → Formação → Conteúdo → FAQ → CTA final → Footer.
 ## SEO
 
 - Um `<h1>` só, no hero. Um `<h2>` por seção.
-- FAQ com JSON-LD `FAQPage`.
+- FAQ com JSON-LD `FAQPage`. O rich result de FAQ foi aposentado no Google
+  (07/05/2026) para todo tipo de site — o markup **não** gera mais resultado
+  visual. Mantemos o JSON-LD porque o Google segue usando os dados estruturados
+  para entender a página, e ajuda motores de resposta. O valor de SEO da seção
+  está no **conteúdo visível** respondendo buscas reais (diferença psicanálise/
+  psicologia, psicanálise cristã online, psicanálise online funciona), não no markup.
 - Foco: `psicanálise cristã online`, `psicanálise e fé cristã`, `psicanalista cristã online`.
   Atendimento é nacional/online — **não otimizar para busca local.**
 - Meta description e Open Graph em todas as rotas.

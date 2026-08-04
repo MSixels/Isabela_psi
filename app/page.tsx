@@ -5,6 +5,7 @@ import Sobre from "@/components/Sobre";
 import ComoFunciona from "@/components/ComoFunciona";
 import Formacao from "@/components/Formacao";
 import Conteudo from "@/components/Conteudo";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
           <ComoFunciona />
           <Formacao />
           <Conteudo />
-          {/* TODO: FAQ · CtaFinal */}
+          <Faq />
+          {/* TODO: CtaFinal */}
         </main>
         {/* TODO: Footer */}
       </div>
