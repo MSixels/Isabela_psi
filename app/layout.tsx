@@ -57,6 +57,24 @@ export const metadata: Metadata = {
   },
 };
 
+// Identidade em dados estruturados. Person — NUNCA um tipo médico/de saúde
+// (Physician, Psychologist, MedicalBusiness…): declarar isso afirmaria por
+// máquina uma qualificação que ela não tem. Psicanálise não é regulamentada e
+// ela não é psicóloga (ver resposta 2 da FAQ).
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Isabela Sixel",
+  jobTitle: "Psicanalista clínica",
+  url: siteUrl,
+  // TODO: trocar por uma foto real da Isabela quando entrar (hoje o cartão de marca).
+  image: `${siteUrl}/og.png`,
+  sameAs: ["https://instagram.com/isabelasixelpsi"],
+  areaServed: "BR",
+  description:
+    "Psicanálise clínica com escuta cristã. Análise online, atendimento em todo o Brasil.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -66,6 +84,10 @@ export default function RootLayout({
         <a href="#conteudo-principal" className="skip-link">
           Pular para o conteúdo
         </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
         <Analytics />
       </body>
