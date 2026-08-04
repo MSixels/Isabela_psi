@@ -11,7 +11,7 @@ export default function Conteudo() {
   return (
     <section
       id="conteudo"
-      className="border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
+      className="revelar border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
     >
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <div className="max-w-[46ch]">

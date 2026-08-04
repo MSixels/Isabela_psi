@@ -38,6 +38,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Respiro ao pular para uma âncora — o header não é sticky, então 32px. */
+  :where(#topo, #conteudo-principal, #sobre, #como, #formacao, #conteudo, #faq) {
+    scroll-margin-top: 32px;
+  }
+
   body {
     background-color: var(--color-aveia);
     color: var(--color-texto);
@@ -137,5 +142,36 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Entrada suave guiada por rolagem (CSS puro, sem JS, sem KB). O estado padrão
+   é VISÍVEL; a animação só entra onde há animation-timeline E o usuário não
+   pediu menos movimento. Assim o Firefox (sem suporte) mostra tudo, nunca em
+   branco. Só opacity e transform — nada que dispare layout. */
+.revelar {
+  opacity: 1;
+  transform: none;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .revelar {
+      animation: revelar linear both;
+      animation-timeline: view();
+      /* termina cedo: o elemento já está inteiro quando a leitura começa. */
+      animation-range: entry 10% entry 65%;
+    }
+  }
+}
+
+@keyframes revelar {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

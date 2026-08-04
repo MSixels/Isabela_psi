@@ -25,7 +25,7 @@ export default function Formacao() {
   return (
     <section
       id="formacao"
-      className="border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
+      className="revelar border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
     >
       <div className="grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
         <div>

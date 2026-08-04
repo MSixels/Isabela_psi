@@ -26,7 +26,7 @@ const ITENS = [
 export default function ComoFunciona() {
   return (
     <section id="como" className="bg-umbre px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]">
-      <div className="mb-12 max-w-[66ch]">
+      <div className="revelar mb-12 max-w-[66ch]">
         <SectionLabel tone="ocre-escuro" className="mb-[22px]">
           Como funciona
         </SectionLabel>
@@ -50,7 +50,7 @@ export default function ComoFunciona() {
         {ITENS.map((item, i) => (
           <li
             key={i}
-            className={`border-t pt-5 ${i === 4 ? "border-ocre" : "border-barro"}`}
+            className={`revelar border-t pt-5 ${i === 4 ? "border-ocre" : "border-barro"}`}
           >
             <h3 className="font-display text-[22px] font-normal text-aveia">
               {item.titulo}

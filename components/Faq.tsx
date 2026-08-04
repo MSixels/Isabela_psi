@@ -5,7 +5,7 @@ export default function Faq() {
   return (
     <section
       id="faq"
-      className="border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
+      className="revelar border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]"
     >
       {/* JSON-LD FAQPage, gerado do mesmo array das perguntas (texto idêntico
           ao visível). O rich result foi aposentado, mas o Google segue usando

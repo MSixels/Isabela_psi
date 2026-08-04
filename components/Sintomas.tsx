@@ -10,7 +10,7 @@ const CARDS = [
 export default function Sintomas() {
   return (
     <section className="border-b border-areia px-6 py-[clamp(64px,8vw,104px)] md:px-[60px]">
-      <div className="mb-11 max-w-[66ch]">
+      <div className="revelar mb-11 max-w-[66ch]">
         <h2 className="font-display text-h2 font-light text-umbre">
           Talvez você se reconheça aqui
         </h2>
@@ -26,7 +26,7 @@ export default function Sintomas() {
           <li
             key={i}
             data-n={i + 1}
-            className="sintoma-card relative overflow-hidden rounded-marca bg-superficie px-6 pt-[26px] pb-[30px]"
+            className="revelar sintoma-card relative overflow-hidden rounded-marca bg-superficie px-6 pt-[26px] pb-[30px]"
           >
             {/* Filete decorativo acima da frase. */}
             <span aria-hidden className="mb-5 block h-0.5 w-[26px] bg-barro" />
@@ -37,7 +37,7 @@ export default function Sintomas() {
         ))}
       </ul>
 
-      <p className="mt-10 max-w-[52ch] font-display text-[19px] italic leading-[1.55] text-texto-corpo">
+      <p className="revelar mt-10 max-w-[52ch] font-display text-[19px] italic leading-[1.55] text-texto-corpo">
         Se alguma dessas frases parou você por um instante, talvez seja hora de
         escutar o que está por baixo.
       </p>

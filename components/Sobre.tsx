@@ -5,7 +5,7 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      className="grid border-b border-areia md:grid-cols-[0.85fr_1.15fr]"
+      className="revelar grid border-b border-areia md:grid-cols-[0.85fr_1.15fr]"
     >
       {/* Coluna da foto (ambiente acolhedor). TODO: trocar por <Image fill
           className="object-cover"> quando a foto real chegar. */}
