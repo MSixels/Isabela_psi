@@ -15,6 +15,7 @@
   --color-texto-suave: color-mix(in oklab, var(--color-umbre) 75%, var(--color-aveia)); /* #6b584c */
   --color-texto-nota: color-mix(in oklab, var(--color-umbre) 49%, var(--color-aveia)); /* #a08a79 */
   --color-sobre-suave: color-mix(in oklab, var(--color-umbre) 25%, var(--color-aveia)); /* #c9b6a3 — texto sobre umbre */
+  --color-ocre-escuro: color-mix(in oklab, var(--color-ocre) 80%, var(--color-aveia)); /* ocre legível sobre umbre (ocre puro reprova, 4,35:1) */
   --color-superficie: color-mix(in oklab, var(--color-areia) 64%, var(--color-aveia)); /* #e2d2ba */
   --color-linha: color-mix(in oklab, var(--color-umbre) 16%, transparent);
   --color-barro-hover: color-mix(in oklab, var(--color-barro) 74%, var(--color-umbre)); /* #7a3f26 */

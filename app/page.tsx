@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Sintomas from "@/components/Sintomas";
 import Sobre from "@/components/Sobre";
+import ComoFunciona from "@/components/ComoFunciona";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
           <Hero />
           <Sintomas />
           <Sobre />
-          {/* TODO: ComoFunciona · Formação · Conteúdo · FAQ · CtaFinal */}
+          <ComoFunciona />
+          {/* TODO: Formação · Conteúdo · FAQ · CtaFinal */}
         </main>
         {/* TODO: Footer */}
       </div>
