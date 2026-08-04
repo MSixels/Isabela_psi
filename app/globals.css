@@ -81,6 +81,18 @@
       font-size: 72px;
     }
   }
+
+  /* Numeração de Formação: pequena, em barro, gerada por CSS (não é texto no
+     HTML). Diferente de Sintomas de propósito — aqui é credencial, não ênfase. */
+  .formacao-item::before {
+    content: attr(data-n);
+    flex: none;
+    width: 34px;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--color-barro);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
