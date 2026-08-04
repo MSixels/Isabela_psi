@@ -50,7 +50,10 @@ export default function Conteudo() {
             />
           );
           return (
-            <li key={post.id} className="border border-areia leading-[0]">
+            <li
+              key={post.id}
+              className="conteudo-card border border-areia leading-[0]"
+            >
               {post.permalink ? (
                 <a
                   href={post.permalink}

@@ -29,7 +29,10 @@ export default function Sintomas() {
             className="revelar sintoma-card relative overflow-hidden rounded-marca bg-superficie px-6 pt-[26px] pb-[30px]"
           >
             {/* Filete decorativo acima da frase. */}
-            <span aria-hidden className="mb-5 block h-0.5 w-[26px] bg-barro" />
+            <span
+              aria-hidden
+              className="sintoma-filete mb-5 block h-0.5 w-[26px] bg-barro"
+            />
             <p className="relative font-display text-[19px] leading-[1.45] text-texto-corpo">
               {texto}
             </p>

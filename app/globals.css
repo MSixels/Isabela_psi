@@ -157,10 +157,13 @@
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .revelar {
-      animation: revelar linear both;
+      /* fill backwards (não both): antes de entrar fica escondido; depois de
+         revelar volta ao estado natural, então um :hover pode sobrepor o
+         transform (senão o fill 'none' venceria o lift do cartão). */
+      animation: revelar linear backwards;
       animation-timeline: view();
       /* termina cedo: o elemento já está inteiro quando a leitura começa. */
-      animation-range: entry 10% entry 65%;
+      animation-range: entry 5% entry 70%;
     }
   }
 }
@@ -168,10 +171,94 @@
 @keyframes revelar {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* --- Hover nos cartões de Sintomas: resposta tátil, não convite. Sem
+   cursor:pointer (são <li> de texto, não links). O guarda hover+fine evita o
+   estado "grudado" após o toque no celular. --- */
+@media (hover: hover) and (pointer: fine) {
+  .sintoma-card {
+    transition: background-color 220ms ease-out;
+  }
+  .sintoma-card:hover {
+    background-color: color-mix(in oklab, var(--color-areia) 78%, var(--color-aveia));
+  }
+
+  /* Movimento (lift, filete, algarismo) só sem prefers-reduced-motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    .sintoma-card {
+      transition:
+        background-color 220ms ease-out,
+        transform 220ms ease-out;
+    }
+    .sintoma-card:hover {
+      transform: translateY(-2px);
+    }
+    .sintoma-filete {
+      transition: width 220ms ease-out;
+    }
+    .sintoma-card:hover .sintoma-filete {
+      width: 44px;
+    }
+    .sintoma-card::before {
+      transition: opacity 220ms ease-out;
+    }
+    .sintoma-card:hover::before {
+      opacity: 0.2;
+    }
+  }
+}
+
+/* --- Hover nos cards do Instagram. --- */
+@media (hover: hover) and (pointer: fine) {
+  .conteudo-card {
+    overflow: clip;
+    transition: border-color 300ms ease-out;
+  }
+  /* TODO: hoje o card é um <li> não focável, então :focus-visible nunca dispara.
+     Quando o post real entrar e o card virar <a>, mover a classe .conteudo-card
+     para o <a> — aí o :focus-visible dá o mesmo retorno a quem navega por teclado. */
+  .conteudo-card:hover,
+  .conteudo-card:focus-visible {
+    border-color: var(--color-barro);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .conteudo-card img {
+      transition: transform 300ms ease-out;
+    }
+    .conteudo-card:hover img,
+    .conteudo-card:focus-visible img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+/* --- FAQ: o painel desliza ao abrir E ao fechar. TODO o bloco (inclusive o
+   height:0) fica dentro de @supports(interpolate-size): o Safari suporta
+   ::details-content mas não interpolate-size — se o height:0 vazasse para fora,
+   ele abriria a resposta com altura zero (invisível). O allow-discrete no
+   content-visibility é o que faz o FECHAMENTO animar. Chrome/Edge deslizam;
+   Safari/Firefox abrem e fecham instantâneo (visível), como hoje. --- */
+@supports (interpolate-size: allow-keywords) {
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      interpolate-size: allow-keywords;
+    }
+    #faq details::details-content {
+      height: 0;
+      overflow: clip;
+      transition:
+        height 280ms ease,
+        content-visibility 280ms ease allow-discrete;
+    }
+    #faq details[open]::details-content {
+      height: auto;
+    }
   }
 }
