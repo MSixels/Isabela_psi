@@ -15,7 +15,7 @@ export default function Home() {
       {/* Moldura editorial: página centralizada em 1180px com fio areia ao redor. */}
       <div id="topo" className="mx-auto max-w-[1180px] border border-areia bg-aveia">
         <Header />
-        <main>
+        <main id="conteudo-principal">
           <Hero />
           <Sintomas />
           <Sobre />

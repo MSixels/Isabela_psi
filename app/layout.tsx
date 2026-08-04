@@ -49,6 +49,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: titulo,
+    description: descricao,
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
@@ -57,6 +63,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${petrona.variable} ${karla.variable}`}>
       <body>
+        <a href="#conteudo-principal" className="skip-link">
+          Pular para o conteúdo
+        </a>
         {children}
         <Analytics />
       </body>
