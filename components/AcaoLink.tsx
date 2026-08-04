@@ -5,6 +5,8 @@ import { track } from "@vercel/analytics";
 type Size = "sm" | "md" | "follow";
 /** claro = botão sobre fundo claro (barro); escuro = sobre fundo umbre (invertido). */
 type Tom = "claro" | "escuro";
+/** botao = CTA preenchido; texto = link de texto em barro (rodapé). */
+type Variante = "botao" | "texto";
 
 type Props = {
   href: string;
@@ -12,6 +14,7 @@ type Props = {
   evento: string;
   /** Seção de origem — vira propriedade do evento. */
   secao: string;
+  variante?: Variante;
   size?: Size;
   tom?: Tom;
   children: React.ReactNode;
@@ -36,24 +39,31 @@ const TONS: Record<Tom, string> = {
     "bg-aveia text-umbre hover:bg-superficie focus-visible:[outline:2px_solid_var(--color-aveia)] focus-visible:[outline-offset:3px]",
 };
 
+// Link de texto (rodapé): barro sobre aveia, sem preenchimento.
+const TEXTO = "font-ui text-[14px] text-barro transition-colors hover:text-barro-hover";
+
 // Link de ação rastreado. Base compartilhada por todo CTA da página (WhatsApp,
 // seguir no Instagram): um clique = um evento, com a seção de origem.
 export default function AcaoLink({
   href,
   evento,
   secao,
+  variante = "botao",
   size = "md",
   tom = "claro",
   children,
   className = "",
 }: Props) {
+  const estilo =
+    variante === "texto" ? TEXTO : `${BASE} ${SIZES[size]} ${TONS[tom]}`;
+
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => track(evento, { secao })}
-      className={`${BASE} ${SIZES[size]} ${TONS[tom]} ${className}`}
+      className={`${estilo} ${className}`}
     >
       {children}
     </a>

@@ -8,6 +8,8 @@ type Props = {
   size?: "sm" | "md";
   /** claro sobre fundo claro (barro); escuro sobre umbre (invertido). */
   tom?: "claro" | "escuro";
+  /** botao (padrão) ou link de texto (rodapé). */
+  variante?: "botao" | "texto";
   /** Mensagem pré-preenchida alternativa; por padrão usa a mensagem padrão. */
   mensagem?: string;
   className?: string;
@@ -19,6 +21,7 @@ export default function WhatsappButton({
   children,
   size = "md",
   tom = "claro",
+  variante = "botao",
   mensagem,
   className = "",
 }: Props) {
@@ -27,6 +30,7 @@ export default function WhatsappButton({
       href={whatsappUrl(mensagem)}
       evento="agendar"
       secao={secao}
+      variante={variante}
       size={size}
       tom={tom}
       className={className}

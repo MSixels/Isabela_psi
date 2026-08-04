@@ -7,6 +7,7 @@ import Formacao from "@/components/Formacao";
 import Conteudo from "@/components/Conteudo";
 import Faq from "@/components/Faq";
 import CtaFinal from "@/components/CtaFinal";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
           <Faq />
           <CtaFinal />
         </main>
-        {/* TODO: Footer */}
+        <Footer />
       </div>
     </div>
   );
