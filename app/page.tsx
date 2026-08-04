@@ -6,6 +6,7 @@ import ComoFunciona from "@/components/ComoFunciona";
 import Formacao from "@/components/Formacao";
 import Conteudo from "@/components/Conteudo";
 import Faq from "@/components/Faq";
+import CtaFinal from "@/components/CtaFinal";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
           <Formacao />
           <Conteudo />
           <Faq />
-          {/* TODO: CtaFinal */}
+          <CtaFinal />
         </main>
         {/* TODO: Footer */}
       </div>

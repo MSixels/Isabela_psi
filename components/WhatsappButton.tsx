@@ -6,7 +6,8 @@ type Props = {
   secao: string;
   children: React.ReactNode;
   size?: "sm" | "md";
-  onDark?: boolean;
+  /** claro sobre fundo claro (barro); escuro sobre umbre (invertido). */
+  tom?: "claro" | "escuro";
   /** Mensagem pré-preenchida alternativa; por padrão usa a mensagem padrão. */
   mensagem?: string;
   className?: string;
@@ -17,7 +18,7 @@ export default function WhatsappButton({
   secao,
   children,
   size = "md",
-  onDark = false,
+  tom = "claro",
   mensagem,
   className = "",
 }: Props) {
@@ -27,7 +28,7 @@ export default function WhatsappButton({
       evento="agendar"
       secao={secao}
       size={size}
-      onDark={onDark}
+      tom={tom}
       className={className}
     >
       {children}
