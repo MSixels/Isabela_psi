@@ -32,9 +32,11 @@ export const metadata: Metadata = {
   },
   description: descricao,
   icons: { icon: "/favicon.svg" },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
+    url: "/",
     siteName: "Isabela Sixel",
     title: titulo,
     description: descricao,
