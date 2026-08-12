@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     description: descricao,
     images: [
       {
-        url: "/og.png",
+        url: "/og-marca.jpg",
         width: 1200,
         height: 630,
-        alt: "Isabela Sixel — psicanálise cristã online",
+        alt: "Isabela Sixel — psicanálise clínica. Um espaço para entender o que se repete.",
       },
     ],
   },
@@ -53,7 +53,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: titulo,
     description: descricao,
-    images: ["/og.png"],
+    images: [
+      {
+        url: "/og-marca.jpg",
+        alt: "Isabela Sixel — psicanálise clínica. Um espaço para entender o que se repete.",
+      },
+    ],
   },
 };
 
@@ -67,8 +72,7 @@ const personJsonLd = {
   name: "Isabela Sixel",
   jobTitle: "Psicanalista clínica",
   url: siteUrl,
-  // TODO: trocar por uma foto real da Isabela quando entrar (hoje o cartão de marca).
-  image: `${siteUrl}/og.png`,
+  image: `${siteUrl}/hero-isabela.jpg`,
   sameAs: ["https://instagram.com/isabelasixelpsi"],
   areaServed: "BR",
   description:
