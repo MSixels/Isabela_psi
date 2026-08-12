@@ -1,4 +1,4 @@
-import FotoPlaceholder from "./FotoPlaceholder";
+import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 
 export default function Sobre() {
@@ -7,12 +7,26 @@ export default function Sobre() {
       id="sobre"
       className="revelar grid border-b border-areia md:grid-cols-[0.85fr_1.15fr]"
     >
-      {/* Coluna da foto (ambiente acolhedor). TODO: trocar por <Image fill
-          className="object-cover"> quando a foto real chegar. */}
-      <FotoPlaceholder
-        label="FOTO — Isabela, ambiente acolhedor"
-        className="aspect-[4/3] md:aspect-auto md:min-h-[420px]"
-      />
+      {/* Duas placas de marca sobrepostas: citação por padrão, crossfade para a
+          de marca no hover (só onde há hover; ver globals). A de marca é
+          decorativa (alt vazio + aria-hidden): quem não tem hover não perde nada. */}
+      <div className="sobre-placa relative aspect-[4/3] md:aspect-auto md:min-h-[420px]">
+        <Image
+          src="/placa-marca.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="(min-width: 768px) 501px, 100vw"
+          className="sobre-marca object-cover"
+        />
+        <Image
+          src="/placa-citacao.jpg"
+          alt="Isabela Sixel — psicanálise clínica. Escuto o que se repete: o padrão que insiste em aparecer."
+          fill
+          sizes="(min-width: 768px) 501px, 100vw"
+          className="sobre-citacao object-cover"
+        />
+      </div>
 
       <div className="px-6 py-[clamp(56px,7vw,96px)] md:px-[60px]">
         <SectionLabel className="mb-[22px]">Sobre</SectionLabel>

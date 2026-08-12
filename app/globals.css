@@ -239,6 +239,32 @@
   }
 }
 
+/* --- Sobre: crossfade entre a placa de citação (padrão) e a de marca (hover).
+   Base sempre visível: citação opaca, marca escondida — assim quem não tem
+   hover vê só a citação e não perde nada. A troca só existe com hover+fine e
+   sem prefers-reduced-motion (senão a placa "gruda" no toque / anima sem pedir). --- */
+.sobre-citacao {
+  opacity: 1;
+}
+.sobre-marca {
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  @media (prefers-reduced-motion: no-preference) {
+    .sobre-citacao,
+    .sobre-marca {
+      transition: opacity 420ms ease;
+    }
+    .sobre-placa:hover .sobre-citacao {
+      opacity: 0;
+    }
+    .sobre-placa:hover .sobre-marca {
+      opacity: 1;
+    }
+  }
+}
+
 /* --- FAQ: o painel desliza ao abrir E ao fechar. TODO o bloco (inclusive o
    height:0) fica dentro de @supports(interpolate-size): o Safari suporta
    ::details-content mas não interpolate-size — se o height:0 vazasse para fora,
