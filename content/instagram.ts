@@ -25,8 +25,8 @@ export const POSTS_CURADOS: Post[] = [
     alt: "Publicação sobre ansiedade: A pressa de garantir o amanhã.",
   },
   {
-    id: "selo",
-    src: "/instagram/post-selo.png",
-    alt: "Publicação da marca Isabela Sixel.",
+    id: "corpo-insiste",
+    src: "/instagram/post-corpo-insiste.jpg",
+    alt: "Publicação: O que não se diz, o corpo insiste.",
   },
 ];
