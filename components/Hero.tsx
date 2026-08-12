@@ -1,4 +1,4 @@
-import FotoPlaceholder from "./FotoPlaceholder";
+import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 import WhatsappButton from "./WhatsappButton";
 
@@ -28,13 +28,18 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Coluna da foto (retrato vertical). TODO: trocar por
-          <Image fill className="object-cover"> quando a foto real chegar — o
-          container já reserva a proporção. */}
-      <FotoPlaceholder
-        label="FOTO — rosto dela, olhando para a câmera · retrato vertical"
-        className="aspect-[3/4] md:aspect-auto md:min-h-[480px]"
-      />
+      {/* Coluna da foto (retrato 3:4, mesma proporção do slot). É o LCP da
+          página → priority. Renderiza ~531px no desktop (coluna 0.9fr de 1180). */}
+      <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[480px]">
+        <Image
+          src="/hero-isabela.jpg"
+          alt="Isabela Sixel, psicanalista, sorrindo para a câmera."
+          fill
+          priority
+          sizes="(min-width: 768px) 531px, 100vw"
+          className="object-cover"
+        />
+      </div>
     </section>
   );
 }
