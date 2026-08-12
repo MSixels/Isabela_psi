@@ -14,12 +14,12 @@ const ITENS = [
     desc: "O que se fala na análise fica na análise. Sempre.",
   },
   {
-    titulo: "Sem número mínimo",
+    titulo: "O ritmo é seu",
     desc: "Você segue enquanto fizer sentido para você. Nada é imposto.",
   },
   {
     titulo: "A primeira conversa",
-    desc: "Vinte minutos, gratuita, pelo WhatsApp. Para nos conhecermos, sem compromisso.",
+    desc: "Gratuita, pelo WhatsApp. Um primeiro encontro para nos conhecermos, sem compromisso e no tempo que for necessário.",
   },
 ];
 

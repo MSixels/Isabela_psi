@@ -7,8 +7,7 @@ const ITENS = [
   },
   {
     titulo: "Formação continuada",
-    // TODO: trocar "[temas — a preencher]" pelos temas reais quando chegarem.
-    desc: "Cursos e estudos em [temas — a preencher].",
+    desc: "Especialização em trauma, transtornos, padrões de repetição e sexualidade, com foco em mulheres.",
   },
   {
     titulo: "Observatórios clínicos semanais",
@@ -16,8 +15,7 @@ const ITENS = [
   },
   {
     titulo: "Prática clínica",
-    // TODO: trocar "[X] anos" pelo número real de anos de prática.
-    desc: "[X] anos de atendimento — a preencher.",
+    desc: "Mais de 200 horas de estágio supervisionado comprovadas e cerca de um ano e meio de atendimento clínico.",
   },
 ];
 

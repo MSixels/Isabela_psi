@@ -7,8 +7,7 @@ export default function CtaFinal() {
         Você não precisa continuar segurando tudo sozinha.
       </h2>
       <p className="mx-auto mb-9 max-w-[44ch] font-display text-[18px] italic leading-[1.6] text-areia">
-        A primeira conversa é só um começo. Vinte minutos, gratuita, pelo
-        WhatsApp.
+        A primeira conversa é só um começo. Gratuita, pelo WhatsApp.
       </p>
       <WhatsappButton secao="cta-final" tom="escuro">
         Agendar uma primeira conversa

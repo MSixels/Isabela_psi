@@ -1,8 +1,8 @@
 const CARDS = [
   "Você funciona bem por fora e está exausta por dentro.",
   "Adia justamente o que mais importa e não entende por quê.",
-  "Repete o mesmo padrão em relações diferentes.",
-  "Reza pedindo paz e continua acordando às três da manhã.",
+  "Repete o mesmo padrão em contextos ou ambientes diferentes.",
+  "Ora pedindo paz e continua acordando às três da manhã.",
   "Sente que precisa dar conta de tudo — e sozinha.",
   "Tem uma inquietação constante que não consegue nomear.",
 ];

@@ -12,7 +12,7 @@ export const FAQ: QA[] = [
   {
     pergunta: "Qual a diferença entre psicanálise e psicologia?",
     resposta:
-      "São campos distintos. A psicologia é uma profissão regulamentada, com abordagens variadas. A psicanálise é um método de escuta do inconsciente: parte do que se repete, dos lapsos, do que insiste em aparecer. Aqui o trabalho é psicanalítico — escutar o que ainda não foi dito.",
+      "São caminhos distintos. A psicologia reúne diferentes abordagens e formas de trabalho. A psicanálise é um método próprio de escuta do inconsciente: parte do que se repete, dos lapsos, daquilo que insiste em aparecer — e trabalha no tempo de cada pessoa. Aqui o trabalho é psicanalítico, com formação e supervisão específicas dessa área.",
   },
   {
     pergunta: "Quanto tempo dura uma análise?",

@@ -24,7 +24,7 @@ export default function Hero() {
         </WhatsappButton>
 
         <p className="mt-4 font-ui text-[14px] text-texto-suave">
-          Uma primeira conversa de 20 minutos, gratuita, pelo WhatsApp.
+          Uma primeira conversa, gratuita, pelo WhatsApp.
         </p>
       </div>
 
