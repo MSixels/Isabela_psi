@@ -5,8 +5,9 @@ import { track } from "@vercel/analytics";
 type Size = "sm" | "md" | "follow";
 /** claro = botão sobre fundo claro (barro); escuro = sobre fundo umbre (invertido). */
 type Tom = "claro" | "escuro";
-/** botao = CTA preenchido; texto = link de texto em barro (rodapé). */
-type Variante = "botao" | "texto";
+/** botao = CTA preenchido; texto = link em barro (rodapé); discreto = crédito
+ *  de autoria (texto-suave, sublinhado só no hover/foco — nunca barro). */
+type Variante = "botao" | "texto" | "discreto";
 
 type Props = {
   href: string;
@@ -17,6 +18,8 @@ type Props = {
   variante?: Variante;
   size?: Size;
   tom?: Tom;
+  /** Rótulo acessível opcional, quando o texto do link não basta sozinho. */
+  ariaLabel?: string;
   children: React.ReactNode;
   className?: string;
 };
@@ -42,6 +45,16 @@ const TONS: Record<Tom, string> = {
 // Link de texto (rodapé): barro sobre aveia, sem preenchimento.
 const TEXTO = "font-ui text-[14px] text-barro transition-colors hover:text-barro-hover";
 
+// Crédito de autoria: discreto, mesmo tamanho do copyright, texto-suave.
+// Nunca barro — o barro é o acento de ação e fica reservado para os CTAs.
+const DISCRETO =
+  "font-ui text-[12px] text-texto-suave underline-offset-2 transition-colors hover:text-texto hover:underline focus-visible:underline";
+
+const NAO_BOTAO: Record<"texto" | "discreto", string> = {
+  texto: TEXTO,
+  discreto: DISCRETO,
+};
+
 // Link de ação rastreado. Base compartilhada por todo CTA da página (WhatsApp,
 // seguir no Instagram): um clique = um evento, com a seção de origem.
 export default function AcaoLink({
@@ -51,17 +64,19 @@ export default function AcaoLink({
   variante = "botao",
   size = "md",
   tom = "claro",
+  ariaLabel,
   children,
   className = "",
 }: Props) {
   const estilo =
-    variante === "texto" ? TEXTO : `${BASE} ${SIZES[size]} ${TONS[tom]}`;
+    variante === "botao" ? `${BASE} ${SIZES[size]} ${TONS[tom]}` : NAO_BOTAO[variante];
 
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={ariaLabel}
       onClick={() => track(evento, { secao })}
       className={`${estilo} ${className}`}
     >

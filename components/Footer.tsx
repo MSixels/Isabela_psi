@@ -11,14 +11,19 @@ const NAV = [
 
 const PERFIL = "https://instagram.com/isabelasixelpsi";
 
+// UTM para medir quantas visitas vêm deste crédito (não é enfeite).
+const CREDITO =
+  "https://portifolio-theta-tan-81.vercel.app/?utm_source=isabelasixel&utm_medium=footer&utm_campaign=credito";
+
 export default function Footer() {
   // TODO: página estática — o ano é resolvido no build. Numa virada de ano sem
   // redeploy, mostra o ano anterior até o próximo build.
   const ano = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-wrap items-start justify-between gap-10 px-6 py-14 md:px-[60px]">
-      <div>
+    <footer className="px-6 py-14 md:px-[60px]">
+      <div className="flex flex-wrap items-start justify-between gap-10">
+        <div>
         {/* ~190px de largura → faixa mini (150–260px), fio íntegro. */}
         <Image
           src="/marca/assinatura-fio-mini-umbre.svg"
@@ -59,8 +64,25 @@ export default function Footer() {
         <WhatsappButton secao="rodape" variante="texto">
           Agendar pelo WhatsApp
         </WhatsappButton>
-        <span className="mt-[6px] font-ui text-[12px] text-texto-suave">
+      </div>
+      </div>
+
+      {/* Fecho: © de um lado, crédito de autoria do outro. No mobile empilha. */}
+      <div className="mt-12 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <span className="font-ui text-[12px] text-texto-suave">
           © {ano} Isabela Sixel
+        </span>
+        <span className="font-ui text-[12px] text-texto-suave">
+          Site por{" "}
+          <AcaoLink
+            href={CREDITO}
+            evento="credito_dev"
+            secao="rodape"
+            variante="discreto"
+            ariaLabel="Portfólio de Matheus Sixel, desenvolvedor do site"
+          >
+            Matheus Sixel
+          </AcaoLink>
         </span>
       </div>
     </footer>
