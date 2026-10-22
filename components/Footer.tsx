@@ -33,8 +33,8 @@ export default function Footer() {
           className="h-auto w-[190px]"
         />
         <p className="mt-[14px] max-w-[32ch] font-ui text-[13px] text-texto-suave">
-          Psicanálise clínica com escuta cristã. Análise online, atendimento em
-          todo o Brasil.
+          Psicanálise clínica com escuta cristã. Análise online, atendimento no
+          Brasil e no exterior.
         </p>
       </div>
 
