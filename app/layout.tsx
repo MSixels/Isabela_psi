@@ -74,9 +74,9 @@ const personJsonLd = {
   url: siteUrl,
   image: `${siteUrl}/hero-isabela.jpg`,
   sameAs: ["https://instagram.com/isabelasixelpsi"],
-  areaServed: "BR",
+  // Sem areaServed: a análise é online e ela já atende pacientes fora do Brasil.
   description:
-    "Psicanálise clínica com escuta cristã. Análise online, atendimento em todo o Brasil.",
+    "Psicanálise clínica com escuta cristã. Análise online, atendimento no Brasil e no exterior.",
 };
 
 export default function RootLayout({
