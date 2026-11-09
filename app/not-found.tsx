@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+// Sem isto a 404 herda do layout o título e o canonical da home.
+export const metadata: Metadata = {
+  title: "Página não encontrada",
+  alternates: { canonical: null },
+};
 
 // 404 na identidade da marca — sóbria, sem humor nem ilustração. /artigos cai
 // aqui enquanto não houver 3 textos, então ela será vista.
