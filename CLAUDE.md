@@ -108,7 +108,7 @@ Como funciona → Formação → Conteúdo → FAQ → CTA final → Footer.
   está no **conteúdo visível** respondendo buscas reais (diferença psicanálise/
   psicologia, psicanálise cristã online, psicanálise online funciona), não no markup.
 - Foco: `psicanálise cristã online`, `psicanálise e fé cristã`, `psicanalista cristã online`.
-  Atendimento é nacional/online — **não otimizar para busca local.**
+  Atendimento online, em português e espanhol, para qualquer país. Não restringir a página ao Brasil — **não otimizar para busca local.**
 - Meta description e Open Graph em todas as rotas.
 
 ## Critérios de aceite
