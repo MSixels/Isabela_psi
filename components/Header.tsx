@@ -30,7 +30,6 @@ export default function Header() {
           alt="Isabela Sixel"
           width={225}
           height={40}
-          priority
           className="hidden h-auto w-[225px] md:block"
         />
       </a>
